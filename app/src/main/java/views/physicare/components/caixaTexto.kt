@@ -31,12 +31,3 @@ fun CaixaTexto(
         )
     )
 }
-
-@Composable
-@Preview
-private fun CTpreview(){
-    CaixaTexto(value ="Marcos",
-        onValueChange ={},
-        modifier =Modifier.fillMaxWidth(),
-        label ="Descricao")
-}

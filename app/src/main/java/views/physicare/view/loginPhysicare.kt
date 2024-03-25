@@ -2,6 +2,7 @@ package views.physicare.view
 
 import android.media.Image
 import android.widget.LinearLayout
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -31,6 +32,7 @@ import views.physicare.components.CaixaTexto
 import views.physicare.ui.theme.primaryBlue
 import views.physicare.ui.theme.secondaryBlue
 
+@ExperimentalFoundationApi
 @Composable
 fun TelaLogin(
     navController: NavController

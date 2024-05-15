@@ -43,6 +43,11 @@ fun TelaCadastro(
     }
 
 
+    var telefoneCadastro by remember{
+        mutableStateOf("")
+    }
+
+
     var senhaCadastro by remember{
         mutableStateOf("")
     }
@@ -84,8 +89,10 @@ fun TelaCadastro(
         Spacer(modifier = Modifier.size(14.dp))
 
         CaixaTexto(
-            value = "email",
-            onValueChange = {},
+            value = emailCadastro,
+            onValueChange = {
+                            emailCadastro = it
+            },
             modifier = Modifier,
             label = "email",
             keyboardType = KeyboardType.Text
@@ -94,8 +101,10 @@ fun TelaCadastro(
         Spacer(modifier = Modifier.size(14.dp))
 
         CaixaTexto(
-            value = "telefone",
-            onValueChange = {},
+            value = telefoneCadastro,
+            onValueChange = {
+                            telefoneCadastro = it
+            },
             modifier = Modifier,
             label = "telefone",
             keyboardType = KeyboardType.Text
@@ -104,8 +113,10 @@ fun TelaCadastro(
         Spacer(modifier = Modifier.size(14.dp))
 
         CaixaTexto(
-            value = "Senha",
-            onValueChange = {},
+            value = senhaCadastro,
+            onValueChange = {
+                            senhaCadastro = it
+            },
             modifier = Modifier,
             label = "Senha",
             keyboardType = KeyboardType.Text
@@ -114,8 +125,10 @@ fun TelaCadastro(
         Spacer(modifier = Modifier.size(14.dp))
 
         CaixaTexto(
-            value = "Confirmacao de senha",
-            onValueChange = {},
+            value = confirmarSenhaCadastro,
+            onValueChange = {
+                            confirmarSenhaCadastro = it
+            },
             modifier = Modifier,
             label = "Confirmacao de senha",
             keyboardType = KeyboardType.Text

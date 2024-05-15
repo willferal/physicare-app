@@ -24,6 +24,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.R
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -60,6 +61,7 @@ fun TelaLogin(
             onValueChange = {},
             modifier = Modifier,
             label = "Usuario",
+            keyboardType = KeyboardType.Text
         )
 
         Spacer(modifier = Modifier.size(14.dp))
@@ -69,12 +71,13 @@ fun TelaLogin(
             onValueChange = {},
             modifier = Modifier,
             label = "Senha",
+            keyboardType = KeyboardType.Text
         )
 
         Spacer(modifier = Modifier.size(14.dp))
         
         Button(onClick = { 
-            navController.navigate("telaDeCadastro")
+            navController.navigate("menuPrincipal")
         }
         ){
             Text(text = "Entrar")

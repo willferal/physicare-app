@@ -15,9 +15,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import views.physicare.ui.theme.PhysicareTheme
+import views.physicare.view.AgendamentoView
+import views.physicare.view.ChatView
 import views.physicare.view.MenuPrincipal
 import views.physicare.view.TelaCadastro
 import views.physicare.view.TelaLogin
+import views.physicare.view.ChatView
+import views.physicare.view.MinhaFichaView
 
 class MainActivity : ComponentActivity() {
     @ExperimentalFoundationApi
@@ -44,6 +48,24 @@ class MainActivity : ComponentActivity() {
                         route = "menuPrincipal"
                     ){
                         MenuPrincipal(navController)
+                    }
+
+                    composable(
+                        route = "chatView"
+                    ){
+                        ChatView(navController)
+                    }
+
+                    composable(
+                        route = "agendamento"
+                    ){
+                        AgendamentoView(navController)
+                    }
+
+                    composable(
+                        route = "minhaFicha"
+                    ){
+                        MinhaFichaView(navController)
                     }
                 }
             }

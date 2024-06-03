@@ -60,8 +60,8 @@ fun TelaCadastro(
 
     Column(
         modifier = Modifier
-            .verticalScroll(rememberScrollState())
             .fillMaxSize()
+            .verticalScroll(rememberScrollState())
             .background(
                 Brush.linearGradient(listOf(primaryBlue, secondaryBlue),)
             ),

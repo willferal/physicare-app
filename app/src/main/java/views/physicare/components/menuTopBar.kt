@@ -426,15 +426,15 @@ fun TopBarComponent(
                     .padding(16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(
-                    text = "Bem-vindo, Wilson",
-                    style = MaterialTheme.typography.h6.copy(
-                        color = Color.White,
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold
-                    ),
-                    modifier = Modifier.padding(bottom = 8.dp)
-                )
+//                Text(
+//                    text = "Bem-vindo, Wilson",
+//                    style = MaterialTheme.typography.h6.copy(
+//                        color = Color.White,
+//                        fontSize = 20.sp,
+//                        fontWeight = FontWeight.Bold
+//                    ),
+//                    modifier = Modifier.padding(bottom = 8.dp)
+//                )
                 TopAppBar(
                     backgroundColor = primaryBlue,
                     contentColor = Color.White,
@@ -463,13 +463,13 @@ fun TopBarComponent(
             ) {
                 DrawerButton(navController, "menuPrincipal", Icons.Default.Home, "Tela Principal")
                 DrawerButton(navController, "chatView", Icons.Default.Email, "Mensagens")
-                DrawerButton(navController, "agendamento", Icons.Default.DateRange, "Agendamentos")
                 DrawerButton(navController, "minhaFicha", Icons.Default.List, "Minha Ficha")
+                DrawerButton(navController, "perimetria", Icons.Default.AccountBox, "Perimetria")
             }
         },
         content = { paddingValues ->
             Box(modifier = Modifier.padding(paddingValues)) {
-                // Your content goes here
+
             }
         }
     )

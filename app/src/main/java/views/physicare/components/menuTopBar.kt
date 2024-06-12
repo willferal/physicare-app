@@ -451,7 +451,10 @@ fun TopBarComponent(
             }
         },
         content = { paddingValues ->
+            Column {
                 SearchBar()
+                CardComponent()
+            }
         }
     )
 }

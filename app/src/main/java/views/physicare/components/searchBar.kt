@@ -33,7 +33,7 @@ fun SearchBar(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .background(Color.LightGray)
+            .background(Color(0xffDED4D4))
             .padding(2.dp),
         verticalAlignment = androidx.compose.ui.Alignment.CenterVertically
     ) {
@@ -48,7 +48,7 @@ fun SearchBar(
             onValueChange = onQueryChanged,
             modifier = modifier
                 .fillMaxWidth()
-                .background(Color.LightGray)
+                .background(Color(0xffDED4D4))
                 .padding(16.dp),
             singleLine = true,
             textStyle = TextStyle(fontSize = 18.sp, fontWeight = FontWeight.Normal, color = Color.Black)

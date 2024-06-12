@@ -419,22 +419,6 @@ fun TopBarComponent(
     Scaffold(
         scaffoldState = scaffoldState,
         topBar = {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(primaryBlue)
-                    .padding(16.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-//                Text(
-//                    text = "Bem-vindo, Wilson",
-//                    style = MaterialTheme.typography.h6.copy(
-//                        color = Color.White,
-//                        fontSize = 20.sp,
-//                        fontWeight = FontWeight.Bold
-//                    ),
-//                    modifier = Modifier.padding(bottom = 8.dp)
-//                )
                 TopAppBar(
                     backgroundColor = primaryBlue,
                     contentColor = Color.White,
@@ -453,8 +437,7 @@ fun TopBarComponent(
                         }
                     }
                 )
-            }
-        },
+            },
         drawerContent = {
             Column(
                 modifier = Modifier
@@ -468,9 +451,7 @@ fun TopBarComponent(
             }
         },
         content = { paddingValues ->
-            Box(modifier = Modifier.padding(paddingValues)) {
-
-            }
+                SearchBar()
         }
     )
 }

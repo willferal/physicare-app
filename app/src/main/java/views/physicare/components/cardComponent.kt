@@ -16,8 +16,32 @@ import retrofit2.Response
 import views.physicare.retrofit.RetrofitInstance
 import views.physicare.retrofit.dados.DataUser
 
+private fun fetchData() {
+    val call = RetrofitInstance.api.findAddresses()
+
+    call.enqueue(object : Callback<DataUser> {
+        override fun onResponse(call: Call<DataUser>, response: Response<DataUser>) {
+            if (response.isSuccessful) {
+                val responseData = response.body()
+                responseData?.let {
+                    it.name
+                    it.email
+                }
+            } else {
+                println("Request failed with code: ${response.code()}")
+            }
+        }
+
+        override fun onFailure(call: Call<DataUser>, t: Throwable) {
+            t.printStackTrace()
+        }
+    })
+}
+
+
 @Composable
 fun CardComponent(){
+    fetchData()
     Card(
         backgroundColor = Color(0xFFDED4D4),
         modifier = Modifier
@@ -27,35 +51,9 @@ fun CardComponent(){
         ConstraintLayout (
             modifier = Modifier.padding(6.dp)
         ){
-            val (nomeContato, descricaoContato) = createRefs()
-
-            Text(text = "Contato 1",
-                modifier = Modifier.constrainAs(nomeContato) {
-                    start.linkTo(parent.start)
-                }
-            )
+//            val (name, descricaoContato) = createRefs()
+            Text(text = "")
         }
     }
 }
 
-//private fun fetchData() {
-//    val call = RetrofitInstance.api.findAddresses()
-//
-//    call.enqueue(object : Callback<DataUser> {
-//        override fun onResponse(call: Call<DataUser>, response: Response<DataUser>) {
-//            if (response.isSuccessful) {
-//                val responseData = response.body()
-//                responseData?.let {
-//
-//                }
-//            } else {
-//                println("Request failed with code: ${response.code()}")
-//            }
-//        }
-//
-//        override fun onFailure(call: Call<DataUser>, t: Throwable) {
-//            t.printStackTrace()
-//        }
-//    })
-//}
-//}

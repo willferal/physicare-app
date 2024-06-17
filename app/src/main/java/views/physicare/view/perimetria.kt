@@ -37,7 +37,9 @@ fun Perimetria(navController: NavController){
     )
 
     Box(){
-        Button(onClick = { navController.navigate("cadastroPerimetria") }) {
-        }
-    }
+        Button(onClick = { navController.navigate("cadastroPerimetria")})
+        {
+
+       }
+   }
 }

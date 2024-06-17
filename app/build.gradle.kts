@@ -47,7 +47,14 @@ android {
 }
 
 dependencies {
-
+    implementation("androidx.compose.ui:ui:1.6.8")
+    implementation("androidx.compose.material:material:1.6.8")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+    implementation("androidx.activity:activity-compose:1.9.0")
+    implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.11.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -64,9 +71,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("androidx.compose.ui:ui:1.0.0")
-    implementation("androidx.compose.material:material:1.0.0")
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
-    implementation("androidx.activity:activity-compose:1.3.1")
-    implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+
 }

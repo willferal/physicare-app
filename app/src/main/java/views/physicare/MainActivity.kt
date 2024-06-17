@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             PhysicareTheme {
                 val navController = rememberNavController()
-                
+
                 NavHost(navController = navController, startDestination = "telaDeLogin"){
                     composable(
                         route = "telaDeLogin"
